@@ -8,8 +8,8 @@ width=40
 step=0.2
   
 # reset
-print("g0 x-50 y-50 ; reset axis")
-print("g92 x0 y0 ; set current position to x=0,y=0")
+print("g0 x-50 y-50 ( reset axis )")
+print("g92 x0 y0 ( set current position to x=0,y=0 )")
 
 for row in range(0, int(length/step)):
   # 250 rows
@@ -22,5 +22,5 @@ for row in range(0, int(length/step)):
       print "g1 x%.1f y%.1f" % (row*step, col*step) 	# Don't bother dithering the first bit
       print "M3\nM5"  		# do we need delays here ?
       dots += 1
-  print "; printed %d dots, going to new line" % dots
+  print "( printed %d dots, going to new line )" % dots
 
