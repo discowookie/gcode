@@ -19,7 +19,7 @@ for row in range(0, int(length/step)):
     # 200 cols
     r = random.randint(0, length/step)
     if(r <= int(row)):
-      print "g1 x%.1f y%.1f" % (row*step, col*step) 
+      print "g0 x%.1f y%.1f" % (row*step, col*step) 
       print "M3"
       print "g1 x%.1f y%.1f" % (row*step, (col+1)*step) # move it over one step
       print "g1 x%.1f y%.1f" % (row*step, col*step)     # and back
