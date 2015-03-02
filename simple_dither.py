@@ -21,7 +21,7 @@ for row in range(0, int(length/step)):
     if(r <= int(row)):
       print "g1 x%.1f y%.1f" % (row*step, col*step) 
       print "M3"
-      print "g1 x%.1f y%.1f" % (row*step, col*(step+1)) # move it over one step
+      print "g1 x%.1f y%.1f" % (row*step, (col+1)*step) # move it over one step
       print "M5"
       dots += 1
   print "( printed %d dots, going to new line )" % dots
