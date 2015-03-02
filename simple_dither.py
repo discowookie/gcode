@@ -22,6 +22,8 @@ for row in range(0, int(length/step)):
       print "g1 x%.1f y%.1f" % (row*step, col*step) 
       print "M3"
       print "g1 x%.1f y%.1f" % (row*step, (col+1)*step) # move it over one step
+      print "g1 x%.1f y%.1f" % (row*step, col*step)     # and back
+      print "g1 x%.1f y%.1f" % (row*step, (col+1)*step) # and back over a third time
       print "M5"
       dots += 1
   print "( printed %d dots, going to new line )" % dots
